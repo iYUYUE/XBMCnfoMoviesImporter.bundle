@@ -999,10 +999,10 @@ def get_movie_name_from_folder(folder_path, with_year):
 
     if folder_split[-1] == 'VIDEO_TS':  # If the folder is from a DVD
         # Strip the VIDEO_TS folder
-        base = os.path.join(*folder_split[1:len(folder_split) - 1])
+        base = os.sep.join(folder_split[1:len(folder_split) - 1])
         name = folder_split[-2]
     else:
-        base = os.path.join(*folder_split)
+        base = os.sep.join(folder_split)
         name = folder_split[-1]
 
     if with_year:  # then apply the MOVIE_NAME_REGEX to strip year information
